@@ -18,3 +18,12 @@ export default {
   }
 };
 </script>
+<style>
+  #app{
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+    padding-bottom: 130px;
+    box-sizing: border-box;
+  }
+</style>
