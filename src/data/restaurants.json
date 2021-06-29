@@ -1,0 +1,148 @@
+[
+  {
+    "_id": { "$oid": "60d59d257ea630742b43d72f" },
+    "restName": "Quick",
+    "restImage": "https://d1ralsognjng37.cloudfront.net/9d50795c-8f19-431a-ae14-35d33d1f8007.jpeg",
+    "restArticles": [
+      {
+        "type": "sauces",
+        "items": [{ "name": "Ketchup", "price": 0.5 }]
+      },
+      {
+        "type": "dishes",
+        "items": [
+          { "name": "Hamburger", "price": 7.9 },
+          { "name": "Cheeseburger", "price": 12.9 },
+          {
+            "name": "Double Cheeseburger",
+            "price": 14.9
+          }
+        ]
+      },
+      {
+        "type": "accompaniments",
+        "items": [{ "name": "French Fries", "price": 3.9 }]
+      },
+      {
+        "type": "drinks",
+        "items": [
+          { "name": "Coca-Cola", "price": 2.9 },
+          { "name": "Water", "price": 1.5 }
+        ]
+      }
+    ],
+    "restType": "Fast Food",
+    "restMenu": [
+      { "size": "XL", "price": 15.99 },
+      { "size": "Medium", "price": 12.99 }
+    ],
+    "restContact": {
+      "phone": "0699999999",
+      "email": "restaurantname@gmail.com",
+      "address": {
+        "streetNumber": 1,
+        "streetName": "Rue d'Espagne",
+        "cityName": "Aix-En-Provence",
+        "postalCode": "13100"
+      }
+    },
+    "restOpen": false
+  },
+  {
+    "_id": { "$oid": "60d5dad47ea630742b43d730" },
+    "restName": "Four Guys",
+    "restImage": "https://duyt4h9nfnj50.cloudfront.net/resized/bulk_actions_image_0d0e0a15-9ce7-4b87-abd2-c2d0453ec4ba-w240-a9.jpg",
+    "restArticles": [
+      {
+        "type": "sauces",
+        "items": [{ "name": "Algérienne", "price": 0.5 }]
+      },
+      {
+        "type": "dishes",
+        "items": [
+          { "name": "Kebab", "price": 7.9 },
+          { "name": "Kebab Indien", "price": 12.9 },
+          { "name": "Kebab Mexicain", "price": 14.9 }
+        ]
+      },
+      {
+        "type": "accompaniments",
+        "items": [{ "name": "French Fries", "price": 3.9 }]
+      },
+      {
+        "type": "drinks",
+        "items": [
+          { "name": "Coca-Cola", "price": 2.9 },
+          { "name": "Water", "price": 1.5 }
+        ]
+      }
+    ],
+    "restType": "Fast Food",
+    "restMenu": [
+      { "size": "XL", "price": 15.99 },
+      { "size": "Medium", "price": 12.99 }
+    ],
+    "restContact": {
+      "phone": "067283967",
+      "email": "fourguys@gmail.com",
+      "address": {
+        "streetNumber": 1,
+        "streetName": "Avenue Mirabeau",
+        "cityName": "Aix-En-Provence",
+        "postalCode": "13100"
+      }
+    },
+    "restOpen": true
+  },
+  {
+    "_id": { "$oid": "60d5f5e4835098851062664a" },
+    "restImage": "https://kathalog.net/admin/images/5b024b5d6c3d63997bf846a20bc1a137.jpeg",
+    "restArticles": [
+      {
+        "type": "sauces",
+        "items": [{ "name": "BBQ", "price": 0.5 }]
+      },
+      {
+        "type": "dishes",
+        "items": [
+          { "name": "Whooper", "price": 7.9 },
+          { "name": "SteackHouse", "price": 12.9 },
+          { "name": "Double SteackHouse", "price": 14.9 }
+        ]
+      },
+      {
+        "type": "accompaniments",
+        "items": [
+          { "name": "French Fries", "price": 3.9 },
+          { "name": "Onion Rings", "price": 4.9 }
+        ]
+      },
+      {
+        "type": "drinks",
+        "items": [
+          { "name": "Coca-Cola", "price": 2.9 },
+          { "name": "Fanta", "price": 2.9 },
+          { "name": "Water", "price": 1.5 }
+        ]
+      }
+    ],
+    "restType": "Fast Food",
+    "restMenu": [
+      { "size": "King XL", "price": 15.9 },
+      { "size": "King", "price": 12.9 }
+    ],
+    "restName": "Burger King",
+    "restContact": {
+      "phone": "0652341567",
+      "email": "bk@gmail.com",
+      "address": {
+        "streetNumber": 1,
+        "streetName": "Lotissement le Belvédère",
+        "cityName": "Marignane",
+        "postalCode": "13700"
+      }
+    },
+    "restOpen": true,
+    "__v": 0
+  }
+]
