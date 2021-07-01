@@ -25,7 +25,7 @@ import axios from 'axios';
 
 export default {
 	inheritAttrs: false,
-	name: 'select-country',
+	name: 'select-city',
 	props: {
 		value: String
 	},

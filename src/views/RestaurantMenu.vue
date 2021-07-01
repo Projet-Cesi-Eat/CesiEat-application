@@ -14,14 +14,14 @@
 						:key="menu.size"
 					>
 						<CardMenu
-							:price="menu.price"
-							:size="menu.size"
+							:menu="menu"
 							:articles="restaurant.restArticles"
+							:restaurant="restaurant"
 						/>
 					</div>
 				</div>
 			</div>
-			<!-- <div class="articles__container mt-4">
+			<div class="articles__container mt-4">
 				<h2 class="display-3">Articles</h2>
 				<div
 					class="cards__articles"
@@ -35,7 +35,7 @@
 						</div>
 					</div>
 				</div>
-			</div> -->
+			</div>
 		</div>
 	</div>
 </template>
