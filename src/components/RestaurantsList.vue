@@ -3,7 +3,7 @@
 		<div class="col-8">
 			<router-link
 				class="item__link"
-				:to="{ name: 'restaurantmenu', params: { id: restaurant._id.$oid } }"
+				:to="{ name: 'restaurantmenu', params: { id: restaurant._id } }"
 			>
 				<div class="row">
 					<div class="col-5">
@@ -19,13 +19,16 @@
 								>Close</badge
 							>
 						</div>
-						<p class="rest__street">
-							{{ restaurant.restContact.address.streetNumber }}
-							{{ restaurant.restContact.address.streetName }}
-						</p>
-						<p class="rest__city">
-							{{ restaurant.restContact.address.cityName }}
-						</p>
+						<div class="mb-3">
+							<p class="rest__street">
+								{{ restaurant.restContact.address.streetNumber }}
+								{{ restaurant.restContact.address.streetName }}
+							</p>
+							<p class="rest__city">
+								{{ restaurant.restContact.address.cityName }}
+							</p>
+						</div>
+						<badge type="default">{{ restaurant.restType }}</badge>
 					</div>
 				</div>
 			</router-link>
@@ -50,11 +53,11 @@
 
 <script>
 export default {
-	name: "RestaurantsList",
+	name: 'RestaurantsList',
 	props: {
 		restaurant: {
 			type: Object,
-			description: "All restaurants array"
+			description: 'All restaurants array'
 		}
 	}
 };
