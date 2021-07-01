@@ -10,9 +10,6 @@
 export default {
 	name: 'CardArticle',
 	props: {
-		price: {
-			type: Number
-		},
 		name: {
 			type: String
 		}

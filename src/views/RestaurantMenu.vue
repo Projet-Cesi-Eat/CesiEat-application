@@ -1,40 +1,48 @@
 <template>
 	<div>
 		<div class="banner__img">
-			<img :src="actualRest.restImage" :alt="actualRest.restName" />
+			<img :src="restaurant.restImage" :alt="restaurant.restName" />
 		</div>
 		<div class="container mt-3">
-			<h1 class="display-2">{{ actualRest.restName }}</h1>
+			<h1 class="display-2">{{ restaurant.restName }}</h1>
 			<div class="menu__container mt-4">
 				<h2 class="display-3">Menu</h2>
 				<div class="row mt-3 mb-2">
-					<div class="card__item col-4" v-for="menu in menus" :key="menu.size">
-						<CardMenu :price="menu.price" :size="menu.size" />
+					<div
+						class="card__item col-4"
+						v-for="menu in restaurant.restMenu"
+						:key="menu.size"
+					>
+						<CardMenu
+							:price="menu.price"
+							:size="menu.size"
+							:articles="restaurant.restArticles"
+						/>
 					</div>
 				</div>
 			</div>
-			<div class="articles__container mt-4">
+			<!-- <div class="articles__container mt-4">
 				<h2 class="display-3">Articles</h2>
 				<div
 					class="cards__articles"
-					v-for="article in articles"
-					:key="article.size"
+					v-for="article in restaurant.restArticles"
+					:key="article.type"
 				>
 					<h3 class="type__name display-4">{{ article.type }}</h3>
 					<div class="row">
 						<div class="col-4" v-for="item in article.items" :key="item.name">
-							<CardArticle :price="item.price" :name="item.name" />
+							<CardArticle :name="item.name" />
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </template>
 <script>
-import restData from '../data/restaurants.json';
 import CardMenu from '../components/CardMenu.vue';
 import CardArticle from '../components/CardArticle.vue';
+import axios from 'axios';
 
 export default {
 	components: {
@@ -43,19 +51,14 @@ export default {
 	},
 	data() {
 		return {
-			actualRest: null,
-			menus: null,
-			articles: null
+			restaurant: []
 		};
 	},
 	mounted() {
-		restData.forEach(rest => {
-			if (rest._id.$oid === this.$route.params.id) {
-				this.actualRest = rest;
-				this.menus = rest.restMenu;
-				this.articles = rest.restArticles;
-			}
-		});
+		axios
+			.get('http://localhost:8080/restaurants/one/?id=' + this.$route.params.id)
+			.then(restaurant => (this.restaurant = restaurant.data.restaurant))
+			.catch(error => (this.errorGet = error));
 	}
 };
 </script>
